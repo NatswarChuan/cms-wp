@@ -5,5 +5,5 @@ set "YY=%dt:~2,2%" & set "YYYY=%dt:~0,4%" & set "MM=%dt:~4,2%" & set "DD=%dt:~6,
 set "HH=%dt:~8,2%" & set "Min=%dt:~10,2%" & set "Sec=%dt:~12,2%"
 
 set "datestamp=%YYYY%%MM%%DD%" & set "timestamp=%HH%%Min%%Sec%"
-
-mysqldump -uroot -p wordpress_5x > cms-wp_%datestamp%_%timestamp%.sql
+set path=C:\wamp64\bin\mariadb\mariadb10.4.10\bin
+mysqldump -uroot -p cms-wp> cms-wp_%datestamp%_%timestamp%.sql
