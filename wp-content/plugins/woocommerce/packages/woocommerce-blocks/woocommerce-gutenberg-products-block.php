@@ -111,7 +111,8 @@ if ( woocommerce_blocks_is_development_version() && ! defined( 'JETPACK_AUTOLOAD
  * We want to fail gracefully if `composer install` has not been executed yet, so we are checking for the autoloader.
  * If the autoloader is not present, let's log the failure and display a nice admin notice.
  */
-$autoloader = __DIR__ . '/vendor/autoload_packages.php';
+
+ $autoloader = __DIR__ . '/vendor/autoload_packages.php';
 if ( is_readable( $autoloader ) ) {
 	require $autoloader;
 } else {
